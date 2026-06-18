@@ -33,7 +33,8 @@ export default function RealProjects() {
                 <Image alt={proj.title} src={proj.image} fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  loading={i > 1 ? "lazy" : undefined} />
+                  priority={i === 0}
+                  loading={i === 0 ? undefined : "lazy"} />
                 <div className="absolute top-4 right-4 bg-[#064e3b]/85 backdrop-blur-sm px-3.5 py-1 rounded-full flex items-center gap-2 shadow-sm">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#34d399] shadow-[0_0_8px_rgba(255,255,255,0.4)]" />
                   <span className="text-white text-[11px] font-semibold tracking-wide">Active</span>

@@ -32,7 +32,6 @@ export default function Testimonials() {
         backgroundImage: 'url("https://d2iyhd3v3rvz2k.cloudfront.net/commonFiles/1775571841973-Rectangle_34624722.png")',
         backgroundSize: "cover",
         backgroundPosition: "center center",
-        backgroundAttachment: "fixed",
       }}
     >
       <div className="absolute inset-0 bg-black/10 lg:bg-gradient-to-r lg:from-black/10 lg:via-black/10 lg:to-black/10" />

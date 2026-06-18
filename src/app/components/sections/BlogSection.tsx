@@ -51,7 +51,7 @@ export default function BlogSection() {
                   className={`group cursor-pointer relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl ${colIdx === 0 ? "h-[216px]" : "h-[272px]"}`}
                 >
                   <a target="_blank" rel="noopener noreferrer" href={`/blogs/${BLOG_POSTS[idx].slug}`} className="block w-full h-full">
-                    <Image alt={`blog: ${BLOG_POSTS[idx].title}`} src={BLOG_POSTS[idx].image} width={1000} height={1000} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                    <Image alt={`blog: ${BLOG_POSTS[idx].title}`} src={BLOG_POSTS[idx].image} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transform group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#003F6B] to-[#007BD100] md:transform md:translate-y-full md:transition-transform md:duration-700 ease-in-out group-hover:translate-y-0">
                       <h3 className="text-white font-semibold capitalize text-lg line-clamp-1">{BLOG_POSTS[idx].title}</h3>
                     </div>
@@ -72,7 +72,7 @@ export default function BlogSection() {
                   className={`group cursor-pointer relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl ${colIdx === 0 ? "h-[272px]" : "h-[216px]"}`}
                 >
                   <a target="_blank" rel="noopener noreferrer" href={`/blogs/${BLOG_POSTS[idx].slug}`} className="block w-full h-full">
-                    <Image alt={`blog: ${BLOG_POSTS[idx].title}`} src={BLOG_POSTS[idx].image} width={1000} height={1000} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                    <Image alt={`blog: ${BLOG_POSTS[idx].title}`} src={BLOG_POSTS[idx].image} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transform group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#003F6B] to-[#007BD100] md:transform md:translate-y-full md:transition-transform md:duration-700 ease-in-out group-hover:translate-y-0">
                       <h3 className="text-white font-semibold capitalize text-lg line-clamp-1">{BLOG_POSTS[idx].title}</h3>
                     </div>
@@ -93,7 +93,7 @@ export default function BlogSection() {
                   className={`group cursor-pointer relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl ${colIdx === 0 ? "h-[216px]" : "h-[272px]"}`}
                 >
                   <a target="_blank" rel="noopener noreferrer" href={`/blogs/${BLOG_POSTS[idx].slug}`} className="block w-full h-full">
-                    <Image alt={`blog: ${BLOG_POSTS[idx].title}`} src={BLOG_POSTS[idx].image} width={1000} height={1000} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" />
+                    <Image alt={`blog: ${BLOG_POSTS[idx].title}`} src={BLOG_POSTS[idx].image} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transform group-hover:scale-105 transition-transform duration-700" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#003F6B] to-[#007BD100] md:transform md:translate-y-full md:transition-transform md:duration-700 ease-in-out group-hover:translate-y-0">
                       <h3 className="text-white font-semibold capitalize text-lg line-clamp-1">{BLOG_POSTS[idx].title}</h3>
                     </div>
@@ -115,7 +115,7 @@ export default function BlogSection() {
                 className="w-[75vw] shrink-0 snap-center group cursor-pointer relative rounded-xl overflow-hidden shadow-lg h-[350px]"
               >
                 <a target="_blank" rel="noopener noreferrer" className="block w-full h-full" href={`/blogs/${post.slug}`}>
-                  <Image alt={`blog: ${post.title}`} src={post.image} width={1000} height={1000} className="w-full h-full object-cover" />
+                  <Image alt={`blog: ${post.title}`} src={post.image} fill sizes="75vw" className="object-cover" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-[#003F6B] to-[#007BD100]">
                     <h3 className="text-white font-semibold capitalize text-lg line-clamp-2 shadow-sm drop-shadow-md">{post.title}</h3>
                   </div>

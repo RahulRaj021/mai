@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { ALL_SERVICES } from "../data";
 
 export default function ServicesCarousel() {
@@ -18,8 +19,8 @@ export default function ServicesCarousel() {
         <div className="animate-marquee flex gap-4" style={{ width: "max-content" }}>
           {[...ALL_SERVICES, ...ALL_SERVICES].map((srv, idx) => (
             <div key={idx} className="flex flex-col items-center min-w-[120px] md:min-w-[140px] shrink-0 cursor-pointer">
-              <div className="w-[160px] h-[160px] lg:w-[180px] lg:h-[180px] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 bg-white">
-                <img src={srv.image} alt={srv.title} className="object-cover w-full h-full" />
+              <div className="relative w-[160px] h-[160px] lg:w-[180px] lg:h-[180px] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 bg-white">
+                <Image src={srv.image} alt={srv.title} fill sizes="180px" className="object-cover" loading="lazy" />
               </div>
               <span className="mt-3 text-xs md:text-sm font-medium text-gray-700 text-center max-w-[140px] leading-tight line-clamp-2">{srv.title}</span>
             </div>

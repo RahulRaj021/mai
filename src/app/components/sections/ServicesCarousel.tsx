@@ -1,5 +1,8 @@
 "use client";
 import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 import { ALL_SERVICES } from "../data";
 
 export default function ServicesCarousel() {
@@ -15,18 +18,27 @@ export default function ServicesCarousel() {
         </p>
       </div>
 
-      <div className="overflow-hidden py-4">
-        <div className="animate-marquee flex gap-4" style={{ width: "max-content" }}>
-          {[...ALL_SERVICES, ...ALL_SERVICES].map((srv, idx) => (
-            <div key={idx} className="flex flex-col items-center min-w-[120px] md:min-w-[140px] shrink-0 cursor-pointer">
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{ delay: 0, disableOnInteraction: false }}
+        speed={3000}
+        loop={true}
+        slidesPerView="auto"
+        spaceBetween={16}
+        allowTouchMove={false}
+        className="py-4"
+      >
+        {ALL_SERVICES.map((srv, idx) => (
+          <SwiperSlide key={idx} style={{ width: "180px" }}>
+            <div className="flex flex-col items-center cursor-pointer">
               <div className="relative w-[160px] h-[160px] lg:w-[180px] lg:h-[180px] rounded-xl overflow-hidden shadow-sm hover:shadow-md transition duration-300 bg-white">
                 <Image src={srv.image} alt={srv.title} fill sizes="180px" className="object-cover" loading="lazy" />
               </div>
               <span className="mt-3 text-xs md:text-sm font-medium text-gray-700 text-center max-w-[140px] leading-tight line-clamp-2">{srv.title}</span>
             </div>
-          ))}
-        </div>
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
       <div className="mt-10 text-center">
         <a href="/services" className="inline-flex items-center gap-2 rounded-full bg-[#1F5CAC] px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-[#1F5CAC]/90 hover:scale-[1.02] transition-all">

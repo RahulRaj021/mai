@@ -13,21 +13,21 @@ export default function HeroSection({
 
   const typeSequence = useMemo(
     () =>
-      SERVICES_LOOP.flatMap((word) => [
+      SERVICES_LOOP.map((word) => [
         word,
         2000,
         () => setIsExiting(true),
         380,
         "",
         () => setIsExiting(false),
-      ]),
+      ]).flat(),
     [],
   );
 
-  const PLACEHOLDER_SEQUENCE = PLACEHOLDERS_LOOP.flatMap((word) => [
+  const PLACEHOLDER_SEQUENCE = PLACEHOLDERS_LOOP.map((word) => [
     `I Want ${word}`,
     2500,
-  ]);
+  ]).flat();
 
   const [searchQuery, setSearchQuery] = useState("");
   const [searchSuggestions, setSearchSuggestions] = useState<string[]>([]);
